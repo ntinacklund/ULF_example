@@ -1,12 +1,12 @@
-from random import randint
+from random import randint, random
 
 def generate_floors():
     floors = []
     
     for _ in range(1000):
-        floor = randint(1, 2)
-        if floor == 1: floors.append(1)
-        else: floors.append(-1)
+        floor = randint(1, 10)
+        if random() < 0.5: floors.append(floor)
+        else: floors.append(floor*-1)
     return floors 
 
 def check_floor(floors):
